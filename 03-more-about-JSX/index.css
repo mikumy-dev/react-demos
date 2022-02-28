@@ -1,0 +1,14 @@
+.navbar {
+  background-color: azure;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-li {
+  margin: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}

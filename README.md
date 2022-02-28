@@ -11,3 +11,12 @@ React Hello World, render a simple `h1` element to html.
 [src](https://github.com/mikumy-dev/react-demos/tree/main/02-use-JSX)
 
 Define a component with function and render to DOM. `class` in JSX is `className`.
+
+### 03. more-about-JSX
+
+[src](https://github.com/mikumy-dev/react-demos/tree/main/03-more-about-JSX)
+
+See the diffrence between creating an element with js and JSX.
+
+- Create with js, append it to DOM, get the DOM element shown.
+- Create with JSX, get an object, append it to DOM, get the `[object Object]`.
