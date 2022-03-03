@@ -20,3 +20,17 @@ See the diffrence between creating an element with js and JSX.
 
 - Create with js, append it to DOM, get the DOM element shown.
 - Create with JSX, get an object, append it to DOM, get the `[object Object]`.
+
+### 04. build-react-environment
+
+[src](https://github.com/mikumy-dev/react-demos/tree/main/04-build-react-environment)
+
+- Create React App by one command, create an app named `my-app-create-automatically`
+
+  ```
+  npx create-react-app my-app-create-automatically
+  ```
+
+- Create React App manually
+
+  view in another [readme](https://github.com/mikumy-dev/react-demos/tree/main/04-build-react-environment/my-app-create-manually)
