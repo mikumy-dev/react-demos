@@ -154,3 +154,6 @@
     Run `npm start` and the page will be opened automatically in `http://localhost:8080/`
 
 11. Add `.gitignore` file to avoid upload node_modules
+
+12. For not uploading node_modules to GitHub, if you download these file from GitHub(without folder node_modules),
+    you need to run `npm install` first, to download the dependencies, and then run `npm start`.
