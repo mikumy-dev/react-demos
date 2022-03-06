@@ -30,10 +30,12 @@ let contacts = [
 ]
 
 export default function App() {
-    let contactList = []
-    contacts.forEach((item) => {
-        contactList.push(<Contact img={item.img} name={item.name} phone={item.phone} email={item.email} />)
+    let contactList = contacts.map((item) => {
+        return <Contact img={item.img} name={item.name} phone={item.phone} email={item.email} />
     })
+    // contacts.forEach((item) => {
+    //     contactList.push(<Contact img={item.img} name={item.name} phone={item.phone} email={item.email} />)
+    // })
     return (
         <div className='contactList'>
             {contactList}
