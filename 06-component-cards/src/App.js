@@ -1,35 +1,17 @@
 import React from 'react'
 import Contact from './components/Contact'
-import avatar from './image/avatar.jpg'
+import dog from './image/dog-src.jpg'
+import contactData from './components/contactData'
 
-let contacts = [
-    {
-        img: avatar,
-        name: 'Ellie Sexton',
-        phone: '(020)1234-5555',
-        email: 'ells@example.com'
-    },
-    {
-        img: avatar,
-        name: 'Freddie Gamble',
-        phone: '(020)1234-5556',
-        email: 'fred@example.com'
-    },
-    {
-        img: avatar,
-        name: 'Kobe Mills',
-        phone: '(020)1234-5557',
-        email: 'kobe@example.com'
-    },
-    {
-        img: avatar,
-        name: 'Franciszek Cote',
-        phone: '(020)1234-5558',
-        email: 'franc@example.com'
-    },
-]
+let contacts = contactData
 
 export default function App() {
+    // react can't refer the image in src by relative path
+    contacts[0].img = 'image/dog-src.jpg' // not show
+    // react can refer the image in public by relative path
+    contacts[1].img = 'image/dog-public.jpg' // show
+    // react can refer the image in src by import
+    contacts[2].img = dog // show
     let contactList = contacts.map((item) => {
         return <Contact img={item.img} name={item.name} phone={item.phone} email={item.email} />
     })
