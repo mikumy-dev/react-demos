@@ -13,7 +13,16 @@ export default function App() {
     // react can refer the image in src by import
     contacts[2].img = dog // show
     let contactList = contacts.map((item) => {
-        return <Contact key={item.id} img={item.img} name={item.name} phone={item.phone} email={item.email} />
+        return (
+            <Contact 
+            key={item.id} 
+            img={item.img} 
+            name={item.name} 
+            phone={item.phone} 
+            email={item.email} 
+            isPrivate={item.isPrivate}
+            />
+        )
     })
     // contacts.forEach((item) => {
     //     contactList.push(<Contact img={item.img} name={item.name} phone={item.phone} email={item.email} />)
