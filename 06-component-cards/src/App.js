@@ -14,9 +14,13 @@ export default function App() {
     contacts[2].img = dog // show
     let contactList = contacts.map((item) => {
         return (
+            // 3 ways to pass properties to component
+            // 1. write every single property like id={item.id} name={item.name} phone={item.phone}
+            // 2. pass the entire object like item={item}
+            // 3. pass use the es6 syntax like {...item}, it will work like the way No.1
             <Contact 
             key={item.id} 
-            item={item}
+            {...item}
             />
         )
     })
