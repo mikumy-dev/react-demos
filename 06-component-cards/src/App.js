@@ -16,11 +16,7 @@ export default function App() {
         return (
             <Contact 
             key={item.id} 
-            img={item.img} 
-            name={item.name} 
-            phone={item.phone} 
-            email={item.email} 
-            isPrivate={item.isPrivate}
+            item={item}
             />
         )
     })
