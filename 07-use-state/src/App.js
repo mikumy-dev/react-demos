@@ -36,6 +36,10 @@ export default function App() {
         })
     }
 
+    function clearHistory() {
+        setCountHistoryRows([])
+    }
+
     // use arrow function in onClick except using the function itself changeCount('-') to prevent calling it at screen onload
     return (
         <>
@@ -48,7 +52,9 @@ export default function App() {
                     <button onClick={() => changeCount('+')}>+1</button>
                 </div>
             <div className='count-history'>
-                <h4>count history</h4>
+                <h3>count history</h3>
+                <button onClick={clearHistory}>clear history</button>
+                <hr />
                 <table>
                     <thead>
                         <tr>
