@@ -11,3 +11,13 @@ button {
   margin: 20px;
   font-size: 20px;
 }
+
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+table {
+  border-collapse: collapse;
+}
