@@ -51,23 +51,23 @@ export default function App() {
                     <button onClick={() => changeCount('reset')}>reset</button>
                     <button onClick={() => changeCount('+')}>+1</button>
                 </div>
-            <div className='count-history'>
-                <h3>count history</h3>
-                <button onClick={clearHistory}>clear history</button>
-                <hr />
-                <table>
-                    <thead>
-                        <tr>
-                            <th>prevCount</th>
-                            <th>operation</th>
-                            <th>newCount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {countHistoryRows}
-                    </tbody>
-                </table>
-            </div>
+                <div className='count-history'>
+                    <h3>count history</h3>
+                    <button onClick={clearHistory}>clear history</button>
+                    <hr />
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>prevCount</th>
+                                <th>operation</th>
+                                <th>newCount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {countHistoryRows}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </>
     )
