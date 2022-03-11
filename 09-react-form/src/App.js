@@ -8,9 +8,10 @@ export default function App() {
     comment: '',
     isHuman: true,
     employment: '',
+    gender: '',
   })
 
-  console.log(formData.employment)
+  // console.log(formData.employment)
   function handleChange(event) {
     const { name, value, type, checked } = event.target
     setFormData((prevData) => {
@@ -93,6 +94,21 @@ export default function App() {
         />
         <label htmlFor="full-time">full-time</label>
       </fieldset>
+
+      <div>
+        <label htmlFor="gender">Gender: </label>
+        <select
+          id="gender"
+          name="gender"
+          onChange={handleChange}
+          value={formData.gender}
+        >
+          <option value="">-- choose --</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+          <option value="other">other</option>
+        </select>
+      </div>
 
       <button type="button" onClick={handleSubmit}>
         submit
