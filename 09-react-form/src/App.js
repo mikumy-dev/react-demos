@@ -7,10 +7,11 @@ export default function App() {
     email: '',
     comment: '',
     isHuman: true,
+    employment: '',
   })
 
+  console.log(formData.employment)
   function handleChange(event) {
-    console.log(formData)
     const { name, value, type, checked } = event.target
     setFormData((prevData) => {
       return {
@@ -59,6 +60,39 @@ export default function App() {
         />
         <label htmlFor="isHuman">Are you a human?</label>
       </div>
+
+      <fieldset>
+        <legend>Current employment status</legend>
+        <input
+          type="radio"
+          id="unemployed"
+          name="employment"
+          value="umemployed"
+          onChange={handleChange}
+          checked={formData.employment === 'umemployed'}
+        />
+        <label htmlFor="unemployed">unemployed</label>
+        <br />
+        <input
+          type="radio"
+          id="part-time"
+          name="employment"
+          value="part-time"
+          onChange={handleChange}
+          checked={formData.employment === 'part-time'}
+        />
+        <label htmlFor="part-time">part-time</label>
+        <br />
+        <input
+          type="radio"
+          id="full-time"
+          name="employment"
+          value="full-time"
+          onChange={handleChange}
+          checked={formData.employment === 'full-time'}
+        />
+        <label htmlFor="full-time">full-time</label>
+      </fieldset>
 
       <button type="button" onClick={handleSubmit}>
         submit
