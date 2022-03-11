@@ -22,12 +22,13 @@ export default function App() {
     })
   }
 
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault()
     console.log(formData)
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         onChange={handleChange}
@@ -110,9 +111,7 @@ export default function App() {
         </select>
       </div>
 
-      <button type="button" onClick={handleSubmit}>
-        submit
-      </button>
+      <button>submit</button>
     </form>
   )
 }
