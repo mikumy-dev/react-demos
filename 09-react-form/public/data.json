@@ -1,0 +1,9 @@
+{
+  "firstName": "Tom",
+  "lastName": "Hanks",
+  "email": "tomh@example.com",
+  "comment": "actor",
+  "isHuman": true,
+  "employment": "unemployed",
+  "gender": "male"
+}

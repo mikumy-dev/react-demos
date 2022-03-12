@@ -11,6 +11,15 @@ export default function App() {
     gender: '',
   })
 
+  // run useEffect when first render, and look for the second parameter array
+  // empty array: only run useEffect for the first time
+  // array with variables: when the variables change, run useEffect again
+  React.useEffect(() => {
+    fetch('http://localhost:9000/data.json')
+      .then((response) => response.json())
+      .then((data) => setFormData(data))
+  }, [])
+
   // console.log(formData.employment)
   function handleChange(event) {
     const { name, value, type, checked } = event.target
@@ -69,9 +78,9 @@ export default function App() {
           type="radio"
           id="unemployed"
           name="employment"
-          value="umemployed"
+          value="unemployed"
           onChange={handleChange}
-          checked={formData.employment === 'umemployed'}
+          checked={formData.employment === 'unemployed'}
         />
         <label htmlFor="unemployed">unemployed</label>
         <br />
