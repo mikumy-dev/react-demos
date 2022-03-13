@@ -1,0 +1,26 @@
+.contactList {
+  display: flex;
+}
+
+.contact {
+  border: solid rgb(196, 196, 196) 1px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.contact:hover {
+  border: solid black 1px;
+}
+
+.contact-img {
+  height: 150px;
+}
+
+.contact-name {
+  font-weight: bold;
+}
+
+form > * {
+  margin: 10px;
+}
