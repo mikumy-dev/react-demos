@@ -15,6 +15,12 @@ export default function App() {
   // empty array: only run useEffect for the first time
   // array with variables: when the variables change, run useEffect again
   React.useEffect(() => {
+    // fetch data from real server
+    // Enable CORS on Server Side
+    fetch('http://localhost:8080/ingredient/getRecipeIngredients/1')
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+
     fetch('http://localhost:9000/data.json')
       .then((response) => response.json())
       .then((data) => setFormData(data))
