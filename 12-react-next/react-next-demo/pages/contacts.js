@@ -1,7 +1,7 @@
 import React from 'react'
-import Contact from './components/Contact'
-import contactData from './components/contactData'
-import ContactForm from './components/ContactForm'
+import Contact from '../components/Contact'
+import contactData from '../components/contactData'
+import ContactForm from '../components/ContactForm'
 import Head from 'next/head' // update page title use next Head component
 import Script from 'next/script' // use next Script in JSX
 
